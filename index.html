@@ -11,12 +11,12 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background: #f4f4f4;
+            background-color: #f4f4f4;
         }
         header {
             background: #333;
             color: white;
-            padding: 15px;
+            padding: 15px 0;
         }
         nav ul {
             list-style: none;
@@ -29,63 +29,80 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
         }
         .hero {
-            padding: 50px;
-            background: #e3e3e3;
+            background: url('freelancing-bg.jpg') center/cover no-repeat;
+            padding: 100px 20px;
+            color: white;
+            text-shadow: 2px 2px 5px black;
         }
         .service-list, .job-cards {
             display: flex;
             justify-content: center;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
         }
         .service, .job-card {
             background: white;
             padding: 15px;
             border-radius: 8px;
+            min-width: 180px;
+            text-align: center;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            width: 200px;
+        }
+        .service img, .job-card img {
+            width: 50px;
+            height: 50px;
         }
         footer {
             background: #333;
             color: white;
-            padding: 15px;
+            padding: 20px;
             margin-top: 20px;
         }
         .payment-section {
-            padding: 20px;
-            background: white;
-            margin: 20px auto;
+            background: url('payment-bg.jpg') center/cover no-repeat;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             width: 50%;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .payment-section img {
-            width: 250px;
-            border: 2px solid #000;
-            border-radius: 10px;
-        }
-        .payment-section button {
-            padding: 10px 20px;
-            background: #28a745;
+            margin: 20px auto;
             color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+        .qr-code img {
+            width: 200px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .pay-button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
         }
-        .payment-section button:hover {
-            background: #218838;
+        .pay-button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            .payment-section {
+                width: 80%;
+            }
+            .qr-code img {
+                width: 150px;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>FreelanceHub</h1>
         <nav>
+            <h1>FreelanceHub</h1>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -106,30 +123,32 @@
     <section id="services">
         <h2>Our Services</h2>
         <div class="service-list">
-            <div class="service">💻 Web Development</div>
-            <div class="service">🎨 Graphic Design</div>
-            <div class="service">✍️ Content Writing</div>
-            <div class="service">📈 Marketing</div>
-            <div class="service">🔍 SEO Optimization</div>
+            <div class="service"><img src="web-icon.png" alt="Web Dev">💻 Web Development</div>
+            <div class="service"><img src="design-icon.png" alt="Graphic Design">🎨 Graphic Design</div>
+            <div class="service"><img src="writing-icon.png" alt="Content Writing">✍️ Content Writing</div>
+            <div class="service"><img src="marketing-icon.png" alt="Marketing">📈 Marketing</div>
+            <div class="service"><img src="seo-icon.png" alt="SEO">🔍 SEO Optimization</div>
         </div>
     </section>
 
     <section id="jobs">
         <h2>Featured Jobs</h2>
         <div class="job-cards">
-            <div class="job-card">Front-End Developer - $500</div>
-            <div class="job-card">Logo Design - $100</div>
-            <div class="job-card">SEO Specialist - $300</div>
-            <div class="job-card">Social Media Manager - $400</div>
+            <div class="job-card"><img src="frontend-icon.png" alt="Front-End"> Front-End Developer - $500</div>
+            <div class="job-card"><img src="logo-icon.png" alt="Logo Design"> Logo Design - $100</div>
+            <div class="job-card"><img src="seo-icon.png" alt="SEO Specialist"> SEO Specialist - $300</div>
+            <div class="job-card"><img src="social-icon.png" alt="Social Media"> Social Media Manager - $400</div>
         </div>
     </section>
 
     <section id="payment" class="payment-section">
         <h2>Make a Payment</h2>
         <p>Scan the QR Code to complete your payment.</p>
-        <img src="qr-code.png" alt="Payment QR Code">
+        <div class="qr-code">
+            <img src="qr-code.png" alt="Payment QR Code">
+        </div>
         <p>After scanning, confirm your transaction and get started with our services.</p>
-        <button onclick="alert('Payment Initiated! Please complete in your UPI app.')">Pay Now</button>
+        <button class="pay-button">Pay Now</button>
     </section>
 
     <footer>
@@ -138,6 +157,5 @@
         <p>Phone: +91 8978493009</p>
         <p>&copy; 2025 FreelanceHub. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
