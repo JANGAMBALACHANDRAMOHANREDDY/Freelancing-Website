@@ -14,7 +14,7 @@
             background-color: #f8f9fa;
         }
         header {
-            background: #222;
+            background: #333;
             color: white;
             padding: 15px 0;
         }
@@ -32,38 +32,37 @@
         }
         .hero {
             padding: 50px;
-            background: url('https://source.unsplash.com/1600x600/?freelance,workspace') no-repeat center center/cover;
+            background: url('freelance-hero.jpg') no-repeat center center/cover;
             color: white;
         }
         .service-list, .job-cards {
             display: flex;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
         .service, .job-card {
-            background: #fff;
-            padding: 20px;
+            background: white;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #222;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .payment-section {
-            background: #fff;
-            padding: 30px;
-            margin: 20px auto;
-            width: 50%;
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 60%;
         }
         .payment-section img {
             width: 200px;
-            border: 2px solid #000;
-            border-radius: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -112,7 +111,7 @@
     <section id="payment" class="payment-section">
         <h2>Make a Payment</h2>
         <p>Scan the QR Code to complete your payment.</p>
-        <img src="qrcode.png" alt="Payment QR Code">
+        <img src="qrcode.png" alt="QR Code">
         <p>After scanning, confirm your transaction and get started with our services.</p>
         <button>Pay Now</button>
     </section>
