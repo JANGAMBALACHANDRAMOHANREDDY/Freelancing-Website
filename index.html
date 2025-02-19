@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreelanceHub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            padding: 50px;
+            background: #f4f4f4;
+        }
+        .service-list, .job-cards {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .service, .job-card {
+            background: #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .qr-section {
+            margin: 20px 0;
+        }
+        .qr-section img {
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -47,7 +98,7 @@
         </div>
     </section>
 
-    <section id="qr-code">
+    <section class="qr-section">
         <h2>Scan to Explore More</h2>
         <img src="qrcode.png" alt="QR Code">
     </section>
